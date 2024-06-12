@@ -34,6 +34,7 @@ Map some keys' output while using Pinyin typing
 ```
 `WinExsit()` method doesn't work any more witch can't catch candidate pop-up in resent win11 updata.
 use `ImageSearch()` to Search for ![win11PinyinCandidateWindowIcon](/pic/Win11PinyinIME_logo.png) near the input cursor (*silly but work*) to detect if using Pinyin
+
 *** Thanks for [mudssky's](https://github.com/mudssky/myAHKScripts) code ***
 
 > config file: `./ini/forceMapExeList.ini`
