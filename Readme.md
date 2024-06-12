@@ -10,14 +10,16 @@ Detect active window, shift IME according to config file
 
  config file: `./ini/ahkIMEAutoShiftCfg.ini`
 format:
-> [en]
-> exe name1
-> exe name2
-> ...
-> [zh] 
-> exe name3
-> exe name4
-> ...   
+```
+ [en]
+ exe name1
+ exe name2
+ ...
+ [zh] 
+ exe name3
+ exe name4
+ ...   
+```
 
  **notice:** comment line is not supported yet
 
