@@ -36,5 +36,6 @@ Map some keys' output while using Pinyin typing
 use `ImageSearch()` to Search for ![win11PinyinCandidateWindowIcon](/pic/Win11PinyinIME_logo.png) near the input cursor (*silly but work*) to detect if using Pinyin
 
 > config file: `./ini/forceMapExeList.ini`
+> 
 > force mapping key in case `ImageSearch()` doesn't work well in some apps
 ---
