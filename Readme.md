@@ -1,8 +1,9 @@
 # AutoHoldKey Script for Microsoft IME
-----
+
 
 Requires AutoHotkey v2.0
 
+----
 
 ## 1. AutoWinSpace.ahk
 
@@ -23,16 +24,29 @@ format:
 
  **notice:** comment line is not supported yet
 
+----
 
-## 2. MSPinyinIME_EasyCandidate.ahk
+## 2. EasyCandidate4OldPinyinIME.ahk
 
-Map some keys' output while using Pinyin typing
+Map some keys' output while using Pinyin typing for old version IME.
+
 ```
  ;  =>  2
  '  =>  3
  /  =>  4
 ```
-`WinExsit()` method doesn't work any more witch can't catch candidate pop-up in resent win11 updata.
+
+---
+
+## 3. MSPinyinIME_EasyCandidate.ahk
+
+Map some keys' output while using Pinyin typing for Win11 newest IME.
+```
+ ;  =>  2
+ '  =>  3
+ /  =>  4
+```
+`WinExsit()` method doesn't work any more whitch can't catch candidate pop-up in resent win11 updata.
 use `ImageSearch()` to Search for ![win11PinyinCandidateWindowIcon](/pic/Win11PinyinIME_logo.png) near the input cursor (*silly but work*) to detect if using Pinyin
 
 ***Thanks for [mudssky's](https://github.com/mudssky/myAHKScripts) code***
