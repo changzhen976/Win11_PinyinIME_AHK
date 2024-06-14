@@ -55,3 +55,10 @@ use `ImageSearch()` to Search for ![win11PinyinCandidateWindowIcon](/pic/Win11Pi
 > 
 > force mapping key in case `ImageSearch()` doesn't work well in some apps
 ---
+
+## 4. Release-Generate Script
+
+1. copy config file to release folder
+
+2. `runwait` use cmdline to call `Ahk2Exe.exe` generate exe 
+
