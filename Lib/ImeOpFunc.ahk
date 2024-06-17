@@ -19,6 +19,12 @@ getCurrentIMEID(){
 }
 ; 使用IMEID激活对应的输入法
 switchIMEbyID(IMEID){
-    winTitle:=WinGetTitle("A")
-    PostMessage(0x50, 0, IMEID,, WinTitle )
+    try{
+        winTitle:=WinGetTitle("A")
+    }catch Error as err{
+        MsgBox "An error was thrown!`nSpecifically: " err.Message
+    }else{
+        PostMessage(0x50, 0, IMEID,, WinTitle )
+    }
+    
 }
