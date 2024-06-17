@@ -10,7 +10,8 @@
 
 
 #Requires AutoHotkey v2.0
-
+; Set detect hidden window
+DetectHiddenWindows True
 ;------------------------
 ; INCLUDES
 ;------------------------
@@ -62,9 +63,12 @@ Loop{
     
     if WinActive("ahk_group enAppGroup")
         switchIMEbyID(IMEmap["en"])  
-    Else
+    Else{
         switchIMEbyID(IMEmap["zh"])
-  
+        Sleep 25
+        if isEnglishMode()
+            send "{Shift}"
+    }
     
     WinWaitNotActive(currentWinID)      ; current window not active, continue next loop
 }
