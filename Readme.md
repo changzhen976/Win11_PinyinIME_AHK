@@ -48,6 +48,7 @@ Map some keys' output while using Pinyin typing for Win11 newest IME.
 ```
 `WinExsit()` method doesn't work any more whitch can't catch candidate pop-up in resent win11 updata.
 use `ImageSearch()` to Search for ![win11PinyinCandidateWindowIcon](/pic/Win11PinyinIME_logo.png) near the input cursor (*silly but work*) to detect if using Pinyin
+> *`/pic/Win11PinyinIME_logo.png` replaced by your own screen catch*
 
 ***Thanks for [mudssky's](https://github.com/mudssky/myAHKScripts) code***
 
