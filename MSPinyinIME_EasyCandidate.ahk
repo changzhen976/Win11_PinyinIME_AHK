@@ -41,7 +41,11 @@ Loop read, A_ScriptDir '\ini\forceMapExeList.ini'
 }
 else
 {
+    ;@Ahk2Exe-IgnoreBegin
     MsgBox "Address forceMapExeList.ini was completely empty or not found."
+    ;@Ahk2Exe-IgnoreEnd
+
+    Exit ; no cfg file, exit
 }  
 
 ifForceMap(){

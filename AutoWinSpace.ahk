@@ -29,7 +29,6 @@ enFlag := 1
 
 Loop read, A_ScriptDir '\ini\ahkIMEAutoShiftCfg.ini'
 {
-    ; MsgBox A_LoopReadLine
     If (StrCompare(enMatchWord, A_LoopReadLine) = 0)
     {
         enFlag := 1
@@ -51,6 +50,7 @@ Loop read, A_ScriptDir '\ini\ahkIMEAutoShiftCfg.ini'
 else
 {
     MsgBox "Address List.txt was completely empty or not found."
+    Exit ; no cfg file, exit
 }  
 
 
@@ -58,8 +58,15 @@ else
 ; wait activeGroup apps active, match en or zh switch IME
 ;---------------------------------------------------------------
 Loop{
-    WinWaitActive "ahk_group activeAppGroup" 
-    currentWinID:= WinGetID("A")        ; get currentWinID
+    WinWaitActive "ahk_group activeAppGroup"
+    try{
+        currentWinID:= WinGetID("A")        ; get currentWinID
+    }catch Error as err{
+        ;@Ahk2Exe-IgnoreBegin
+        MsgBox "An error was thrown from `'getCrtWinID`'!`nSpecifically: " err.Message
+        ;@Ahk2Exe-IgnoreEnd
+        Continue ; next loop
+    }   
     
     if WinActive("ahk_group enAppGroup")
         switchIMEbyID(IMEmap["en"])  
