@@ -59,7 +59,8 @@ use `ImageSearch()` to Search for ![win11PinyinCandidateWindowIcon](/pic/Win11Pi
 
 ## 4. Release-Generate Script
 
+generate steps:
 1. copy config file to release folder
-
+2. add `ahk2exe` to PATH
 2. `runwait` use cmdline to call `Ahk2Exe.exe` generate exe 
 
